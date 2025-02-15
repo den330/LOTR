@@ -25,7 +25,6 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.white)
                 HStack {
-                    
                     VStack {
                         HStack {
                             Image(.silverpiece)
