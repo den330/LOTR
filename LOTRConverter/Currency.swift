@@ -48,5 +48,13 @@ enum Currency: Double, CaseIterable, Identifiable {
     var id: Currency {
         self
     }
-
+    
+    func convert(to targetCurrency: Currency, with quantity: String) -> String {
+        let ratio = targetCurrency.rawValue / self.rawValue
+        guard let quantityValue = Double(quantity) else {
+            return ""
+        }
+        let result = quantityValue * ratio
+        return String(format: "%.2f", result)
+    }
 }
